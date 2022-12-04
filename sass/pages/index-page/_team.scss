@@ -1,0 +1,62 @@
+.team {
+    background-color: $clr-bg-secondary-beta;
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+    &__card {
+        border-radius: 0px 0px 4px 4px;
+        width: calc((100% - 90px) / 4);
+        background-color: $clr-bg-primary;
+        box-shadow: $shdw-team-shadow;
+    }
+    &__footer {
+        padding: 30px 32px;
+        text-align: center;
+    }
+    &__member {
+        margin-bottom: 10px;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: calc(19 / 16);
+        letter-spacing: 0.03em;
+        color: $clr-txt-secondary;
+    }
+    &__position {
+        margin-bottom: 16px;
+        font-size: 16px;
+        line-height: calc(19 / 16);
+        letter-spacing: 0.03em;
+    }
+}
+
+.team-socials {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-basis: calc((100% - 30px) / 4);
+
+    &__link {
+        background-color: $clr-bg-primary;
+        color: $clr-icons;
+        transition: background-color $transition,
+            color $transition;
+
+        &:hover,
+        &:focus {
+            background-color: $clr-accent;
+            color: $clr-bg-primary;
+        }
+    }
+    &__icon {
+        fill: currentColor;
+        transition: fill $transition;
+
+        .team-socials__link:hover &, 
+        .team-socials__link:focus & {
+            fill: currentColor;
+        }
+    }
+}

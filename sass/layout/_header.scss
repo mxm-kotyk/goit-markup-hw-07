@@ -1,5 +1,14 @@
 .header {
     border-bottom: 1px solid $clr-header-border;
+    &-contacts {
+            margin-left: auto;
+            gap: 50px;
+        }
+    &__logo {
+        padding-top: 24px;
+        padding-bottom: 24px;
+        color: $clr-header-logo;
+    }
 }
 
 .header__container,
@@ -15,20 +24,9 @@
     flex-basis: calc((100% - 100px) / 3);
 }
 
-.header-contacts {
-    margin-left: auto;
-    gap: 50px;
-}
-
 .nav,
 .header-contacts {
     align-items: center;
-}
-
-.header__logo {
-    padding-top: 24px;
-    padding-bottom: 24px;
-    color: $clr-header-logo;
 }
 
 .nav__link,
@@ -48,15 +46,20 @@
     }
 }
 
+.header-contacts__link {
+    display: flex;
+    align-items: center;
+    color: inherit;
+}
+
 .header-contacts__icon {
     margin-right: 10px;
     fill: currentColor;
     transition: fill $transition;
-}
-
-.header-contacts__link:hover .header-contacts__icon,
-.header-contacts__link:focus .header-contacts__icon {
-    fill: currentColor;
+    .header-contacts__link:hover &,
+    .header-contacts__link:focus & {
+            fill: currentColor;
+        }
 }
 
 .logo--alt {
@@ -66,21 +69,15 @@
 .nav__link--current {
     position: relative;
     color: $clr-accent;
+    &::after {
+            position: absolute;
+            left: 0;
+            bottom: -1px;
+            content: "";
+            width: 100%;
+            height: 4px;
+            border-radius: 2px;
+            background-color: $clr-accent;
+        }
 }
 
-.nav__link--current::after {
-    position: absolute;
-    left: 0;
-    bottom: -1px;
-    content: "";
-    width: 100%;
-    height: 4px;
-    border-radius: 2px;
-    background-color: $clr-accent;
-}
-
-.header-contacts__link {
-    display: flex;
-    align-items: center;
-    color: inherit;
-}
