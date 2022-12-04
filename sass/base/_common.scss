@@ -1,0 +1,13 @@
+body {
+    background-color: $clr-bg-primary;
+    color: $clr-txt-primary;
+    font-family: Roboto, "Helvetica Neue", "Segoe UI", sans-serif;
+}
+
+.container {
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: 15px;
+    padding-left: 15px;
+}
