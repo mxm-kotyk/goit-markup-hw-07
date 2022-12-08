@@ -1,8 +1,8 @@
 @import "./base/modern-normalize";
 @import "./base/reset";
+@import "./utilities/variables";
 @import "./base/common";
 @import "./base/section";
-@import "./utilities/variables";
 @import "./utilities/visually-hidden";
 @import "./components/button";
 @import "./components/social-link-buttons";
@@ -14,6 +14,6 @@
 @import "./pages/index-page/team";
 @import "./pages/index-page/clients";
 @import "./layout/footer";
-@import "./pages/index-page/modal";
+@import "./components/modal";
 @import "./pages/portfolio-page/filter-buttons";
 @import "./pages/portfolio-page/cards";
